@@ -1,0 +1,17 @@
+[build]
+  command = "cd frontend && npm run build && cd ../backend && npm run build"
+  functions = "backend/lambda"
+  publish = "frontend/build"
+
+[dev]
+  command = "cd frontend && npm start"
+  port = 3000
+  targetPort = 8888
+  publish = "frontend/build"
+  autoLaunch = true
+  framework = "#custom"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200

@@ -1,0 +1,20 @@
+{
+  "name": "family-tree-backend",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "express": "^4.17.1",
+    "serverless-http": "^2.7.0",
+    "cors": "^2.8.5",
+    "mongoose": "^6.0.8"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "build": "netlify-lambda build functions",
+    "dev": "nodemon server.js"
+  },
+  "devDependencies": {
+    "netlify-lambda": "^2.0.15",
+    "nodemon": "^2.0.13"
+  }
+}

@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "build": "netlify-lambda build functions",
+    "build": "netlify-lambda build functions --config ../netlify.toml",
     "dev": "nodemon server.js"
   },
   "devDependencies": {
